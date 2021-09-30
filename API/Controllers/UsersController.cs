@@ -20,6 +20,7 @@ namespace API.Controllers
             _context = context;            
         }
         [HttpGet]
+        //This method is used for Getting Users List
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
         {
             return await _context.Users.ToListAsync();
